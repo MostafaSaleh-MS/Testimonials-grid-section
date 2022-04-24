@@ -1,0 +1,124 @@
+/* satrt rules */
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+}
+/* end rules */
+/* start cpmponent */
+.container {
+    width: 90%;
+    margin: auto;
+    padding: 5%;
+    background-color: hsl(210, 46%, 95%);
+}
+
+.main-p-white {
+    color: white;
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+
+}
+.main-p-white + p {
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.main-p-gray {
+    color: hsl(219, 29%, 14%);
+    font-weight: 600;
+    font-size: 1.4rem;
+    margin-bottom: 30px;
+
+}
+.main-p-gray + p{
+    color: hsla(217, 30%, 14%, 0.7);
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+.name-white {
+    color: white;
+    font-weight: 600;
+    display: block;
+}
+.name-white + span{
+    color: rgba(255, 255, 255, 0.5);
+    font-weight: 500;
+}
+
+.name-gray {
+    color: hsl(219, 29%, 14%);
+    font-weight: 600;
+    display: block;
+}
+.name-gray + span {
+    color: hsla(217, 30%, 14%, 0.5);
+    font-weight: 500;
+}
+/* end cpmponent */
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 25px;
+    grid-template-areas: "one one two five" "three four four five";
+}
+
+@media (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.container .card {
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0px 5px 20px 0px hsl(217deg 30% 14% / 24%);
+}
+
+.container .one {
+    grid-area: one;
+    background-image: url(images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: 80% 10%;
+    background-color: hsl(263, 55%, 52%);
+}
+.container .two {
+    grid-area: two;
+    background-color: hsl(217, 19%, 35%);
+}
+.container .three {
+    grid-area: three;
+    background-color: white;
+}
+.container .four {
+    grid-area: four;
+    background-color: hsl(219, 29%, 14%);
+}
+.container .five {
+    grid-area: five;
+    background-color: white;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.container .card .profile .image,
+.container .card .profile img {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 1px solid white;
+    margin-right: 20px;
+}
